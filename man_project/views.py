@@ -7,8 +7,8 @@ from study_framework.templates import render
 def main_view(request):
     fc_request = request.get('main')
     context = {
-        'page_name': 'Main',
-        'page_header': 'Main_page',
+        'page_name': 'Курсы по вождению',
+        'page_header': 'Курсы по вождению. Главная',
     }
     if request['method'] == 'GET':
         context['request_params'] = request['request_params']

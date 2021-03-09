@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+        {% block title %}
+            {{ context.page_name|capitalize }}
+        {% endblock %}
+    </title>
+    {% block css %}
+	    <link rel="stylesheet" type="text/css" href="css/style.css">
+    {% endblock %}
+</head>
+<body>
+	<div class="container">
+        {% block container %}
+        {% endblock %}
+	</div>
+    {% block footer %}
+        <div class="footer">
+            <div class="copyright">
+            © Copyright - 2021. All Rights Reserved.
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block container %}
+<h1>{{ page_header|Header }}</h1>
+{% include 'includes/inc_menu.html' %}
+<ul>
+    {% for item in objects_list %}
+    <li>
+        {{item.name}} <span>Количество курсов: {{item.course_count()}}</span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
