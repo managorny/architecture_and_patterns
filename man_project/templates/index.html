@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>
-		{{ context.page_name }}
-    </title>
-	    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-	<div class="container">
-		<h1>{{ context.page_header }}</h1>
-		<p>{{ context.method }}</p>
-		<li>{{ context.request_params }}</li>
-		<br>
-	</div>
-	<div class="footer">
-		<div class="copyright">
-		© Copyright - 2021. All Rights Reserved.
-		</div>
-	</div>
-</body>
-</html>
+{% extends "base.html" %}
+{% block container %}
+<h1>{{ context.page_header }}</h1>
+{% include 'includes/inc_menu.html' %}
+<br>
+{% endblock %}
